@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css media quaries</title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px
+		}
+
+		body{
+			background-color: PowderBlue;
+		}
+
+		#container{
+			display: grid;
+			grid-gap: 5px;
+			grid-template-columns: repeat(4,1fr);
+		}
+
+		.box{
+			height: 60px;
+			margin: 5px;
+			border: 1px solid black;
+			border-radius: 5px;
+			color: white;
+			text-align: center;
+			padding-top: 10px;
+		}
+
+		#box1{
+			background-color: blue;
+		}
+
+		#box2{
+			background-color: Teal;
+		}
+
+		#box3{
+			background-color: green;
+		}
+
+		#box4{
+			background-color: purple;
+		}
+
+		/*--------------------for desktops/laptops------------------*/
+		@media (min-width: 1024px){
+			#container{
+				display: grid;
+				grid-gap: 5px;
+				grid-template-columns: repeat(4,1fr);
+			}	
+		}
+
+		/*--------------------for tablets------------------*/
+		@media (min-width: 769px) and (max-width: 1023px){
+			#container{
+				display: grid;
+				grid-gap: 5px;
+				grid-template-columns: repeat(2,1fr);
+			}	
+		}
+
+		/*--------------------for smartphones------------------*/
+		@media (min-width: 469px) and (max-width: 768px){
+			#container{
+				display: grid;
+				grid-gap: 5px;
+				grid-template-columns: repeat(1,1fr);
+			}	
+		}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="box" id="box1">box-1</div>
+		<div class="box" id="box2">box-2</div>
+		<div class="box" id="box3">box-3</div>
+		<div class="box" id="box4">box-4</div>
+	</div>
+</body>
+</html>
